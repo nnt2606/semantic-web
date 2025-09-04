@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.geometry.Insets?>
+<?import java.lang.String?>
+<BorderPane prefHeight="573.0" prefWidth="921.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.quiz">
+
+    <fx:define>
+        <ToggleGroup fx:id="optionsGroup"/>
+    </fx:define>
+
+    <!-- Header -->
+    <top>
+        <HBox spacing="12.0" alignment="CENTER_LEFT">
+            <children>
+                <Label layoutX="188.0" text="DBpedia Country Capital Quiz" styleClass="heading">
+                    <font>
+                        <Font name="72 Black" size="40.0"/>
+                    </font>
+                </Label>
+            </children>
+            <padding>
+                <Insets top="12" right="16" bottom="12" left="16"/>
+            </padding>
+            <styleClass>
+                <String fx:value="header-bar"/>
+            </styleClass>
+        </HBox>
+    </top>
+
+    <!-- Main content: question + options -->
+    <center>
+        <VBox spacing="16.0">
+            <children>
+                <!-- Question text -->
+                <Label fx:id="questionLabel"
+                       wrapText="true"
+                       text="Loading question..."
+                       maxWidth="Infinity">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                    <VBox.margin>
+                        <Insets top="8" right="8" bottom="0" left="8"/>
+                    </VBox.margin>
+                </Label>
+
+                <HBox spacing="20.0">
+                    <children>
+                        <!-- Left: options -->
+                        <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <RadioButton fx:id="optionA"
+                                             text="Option A"
+                                             toggleGroup="$optionsGroup"
+                                             mnemonicParsing="false"
+                                             maxWidth="Infinity">
+                                    <font><Font size="18.0"/></font>
+                                </RadioButton>
+                                <RadioButton fx:id="optionB"
+                                             text="Option B"
+                                             toggleGroup="$optionsGroup"
+                                             mnemonicParsing="false"
+                                             maxWidth="Infinity">
+                                <font><Font size="18.0"/></font>
+                            </RadioButton>
+                                <RadioButton fx:id="optionC"
+                                             text="Option C"
+                                             toggleGroup="$optionsGroup"
+                                             mnemonicParsing="false"
+                                             maxWidth="Infinity">
+                                    <font><Font size="18.0"/></font>
+                                </RadioButton>
+                                <RadioButton fx:id="optionD"
+                                             text="Option D"
+                                             toggleGroup="$optionsGroup"
+                                             mnemonicParsing="false"
+                                             maxWidth="Infinity">
+                                    <font><Font size="18.0"/></font>
+                                </RadioButton>
+                            </children>
+                            <padding>
+                                <Insets top="4" right="8" bottom="4" left="8"/>
+                            </padding>
+                        </VBox>
+
+                        <!-- Right: thumbnail (optional) -->
+<!--                        <VBox alignment="TOP_CENTER" spacing="8.0">-->
+<!--                            <children>-->
+<!--                                <Label text="Thumbnail" style="-fx-text-fill: -fx-text-inner-color; -fx-opacity: 0.7;">-->
+<!--                                    <font>-->
+<!--                                        <Font size="12.0"/>-->
+<!--                                    </font>-->
+<!--                                </Label>-->
+<!--                                <ImageView fx:id="thumbnail"-->
+<!--                                           fitWidth="200.0"-->
+<!--                                           preserveRatio="true"-->
+<!--                                           smooth="true"-->
+<!--                                           pickOnBounds="true"-->
+<!--                                           visible="false"/> &lt;!&ndash; controller will show/hide &ndash;&gt;-->
+<!--                            </children>-->
+<!--                            <padding>-->
+<!--                                <Insets top="0" right="12" bottom="0" left="0"/>-->
+<!--                            </padding>-->
+<!--                        </VBox>-->
+                    </children>
+                    <VBox.margin>
+                        <Insets top="0" right="8" bottom="0" left="8"/>
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+
+    <!-- Footer: controls -->
+    <bottom>
+        <HBox spacing="8.0" alignment="CENTER_RIGHT">
+            <children>
+                <Label text="Select one option, then press Next." style="-fx-opacity: 0.8;">
+                    <font>
+                        <Font size="12.0"/>
+                    </font>
+                </Label>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button fx:id="nextButton"
+                        text="Next ➜"
+                        defaultButton="true"
+                        prefWidth="120.0"/>
+            </children>
+            <padding>
+                <Insets top="12" right="16" bottom="12" left="16"/>
+            </padding>
+            <styleClass>
+                <String fx:value="footer-bar"/>
+            </styleClass>
+        </HBox>
+    </bottom>
+
+    <!-- Recommended padding for the whole layout -->
+    <padding>
+        <Insets top="0" right="0" bottom="0" left="0"/>
+    </padding>
+
+    <!-- Optional minimal inline styles; move to CSS for production -->
+    <stylesheets>
+        <!-- Replace with your own stylesheet if you have one -->
+    </stylesheets>
+    <style>
+        .header-bar { -fx-background-color: linear-gradient(to right, #2a4365, #2c5282); }
+        .heading { -fx-text-fill: white; }
+        .footer-bar { -fx-background-color: #f2f2f7; }
+    </style>
+
+</BorderPane>

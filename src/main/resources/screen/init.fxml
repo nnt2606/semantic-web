@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="573.0" prefWidth="921.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.init">
+   <children>
+       <Label layoutX="188.0" layoutY="105.0" text="DBPEDIA QUIZ GAME">
+           <font>
+               <Font name="72 Black" size="53.0" />
+           </font>
+       </Label>
+       <HBox layoutX="237.0" layoutY="237.0" prefHeight="144.0" prefWidth="432.0">
+          <children>
+              <Button id="btnPlay" mnemonicParsing="false" onAction="#onClickPlay" prefHeight="162.0" prefWidth="450.0" text="Play">
+                  <font>
+                      <Font name="72 Black" size="42.0" />
+                  </font>
+              </Button>
+          </children>
+       </HBox>
+   </children>
+</AnchorPane>

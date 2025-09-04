@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="461.0" prefWidth="939.0" stylesheets="style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.result">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="12" styleClass="toolbar">
+           <children>
+               <Label styleClass="title" text="Results">
+                   <font>
+                  <Font size="17.0" />
+               </font>
+               </Label>
+           </children>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="16" styleClass="content">
+           <children>
+               <Label fx:id="scoreLabel" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Score">
+               <font>
+                  <Font name="72 Black" size="33.0" />
+               </font>
+            </Label>
+               <ListView fx:id="listView" style="-fx-font-size: 20px"/>
+           </children>
+
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="12" styleClass="footer">
+            <padding><Insets bottom="16" left="16" right="16" top="12" /></padding>
+           <children>
+               <Button onAction="#onPlayAgain" styleClass="primary" text="Play again" />
+           </children>
+        </HBox>
+    </bottom>
+</BorderPane>
