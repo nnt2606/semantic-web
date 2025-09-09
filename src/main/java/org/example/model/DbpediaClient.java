@@ -147,6 +147,7 @@ public class DbpediaClient {
                 int status = resp.statusCode();
                 if(status >= 200 && status < 300) {
                     System.out.println("Fetch data success!");
+                    System.out.println(new JSONObject(resp.body()));
                     return new JSONObject(resp.body());
                 }else if(status == 429 || status > 500) {
                     System.out.println("Try again");

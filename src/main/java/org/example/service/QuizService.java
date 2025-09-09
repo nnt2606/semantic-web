@@ -51,6 +51,7 @@ public class QuizService {
         }
 
         List<String> capitals = db.getAsianCapitalName(preloadSize*2);
+        System.out.println(capitals);
         capitals.removeIf(QuizService::isBlank);
 
         Set<String> seen = new HashSet<>(capitalPool.size() + capitals.size());

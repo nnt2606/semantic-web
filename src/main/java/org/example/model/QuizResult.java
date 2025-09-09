@@ -29,11 +29,11 @@ public class QuizResult {
     /** Mục kết quả cho 1 câu hỏi */
     public static class Item {
         private final String prompt;
-        private final List<String> options;   // size = 4 theo thiết kế hiện tại
-        private final int correctIndex;       // 0..3
-        private final int selectedIndex;      // 0..3 hoặc -1 nếu bỏ qua
-        private final String explain;         // có thể rỗng
-        private final String thumbnail;       // URL có thể rỗng
+        private final List<String> options;
+        private final int correctIndex;
+        private final int selectedIndex;
+        private final String explain;
+        private final String thumbnail;
 
         public Item(String prompt,
                     List<String> options,
